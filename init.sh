@@ -10,7 +10,7 @@ usermod -aG sudo $USERNAME
 
 sudo sed '/force_color_prompt=yes/s/^#//' -i ~.bashrc
 
-echo -e "${BGreen}\nUser created!, moving on.....${NC}"
+echo -e "${BGreen}\nUser $USERNAME created!, moving on.....${NC}"
 
 
 
