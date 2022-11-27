@@ -8,7 +8,7 @@ read PASSWD
 #sudo useradd -m ${username} -p ${passwd}# -D -s /bin/bash
 #usermod -aG sudo ${username}
 
-sudo useradd -m -u $USERNAME  -o -d /home/$USERNAME -s /bin/bash $USERNAME && \
+sudo useradd $USERNAME -d /home/$USERNAME -s /bin/bash $USERNAME && \
 sudo passwd $USERNAME && \
 usermod -aG sudo $USERNAME
 
