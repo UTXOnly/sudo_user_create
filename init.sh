@@ -2,13 +2,13 @@
 
 echo "Please enter the username you could like to create and press ENTER: "
 read USERNAME
-echo "Enter user password: "
-read PASSWD
+#echo "Enter user password: "
+#read PASSWD
 #create user, prompt for password, add to sudo group
 #sudo useradd -m ${username} -p ${passwd}# -D -s /bin/bash
 #usermod -aG sudo ${username}
 
-sudo useradd -m $USERNAME -d /home/$USERNAME -s /bin/bash $USERNAME 
+sudo useradd -m $USERNAME #-d /home/$USERNAME -s /bin/bash $USERNAME 
 sudo passwd $USERNAME 
 usermod -aG sudo $USERNAME
 
