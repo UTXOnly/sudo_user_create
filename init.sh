@@ -6,7 +6,7 @@ read USERNAME
 
 sudo useradd -m $USERNAME -s /bin/bash #$USERNAME 
 sudo passwd $USERNAME 
-usermod -aG sudo $USERNAME
+sudo usermod -aG sudo $USERNAME
 
 sudo sed '/force_color_prompt=yes/s/^#//' -i ~.bashrc
 
