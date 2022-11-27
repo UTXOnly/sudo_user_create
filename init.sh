@@ -1,5 +1,6 @@
 #!/bin/bash
-
+BGreen='\u001b[32;1m'
+NC='\033[0m'
 echo "Please enter the username you could like to create and press ENTER: "
 read USERNAME
 
@@ -9,12 +10,7 @@ usermod -aG sudo $USERNAME
 
 sudo sed '/force_color_prompt=yes/s/^#//' -i ~.bashrc
 
-echo -e "Do you want to sign in as this user now?\n(yes|no)\n"
-read answer
-if [ $answer == yes ]; then
-    su $USERNAME
-else
-    echo "user created....exiting"
-fi
+echo -e "${BGreen}\nUser created!, moving on.....${NC}"
+
 
 
