@@ -2,16 +2,12 @@
 
 echo "Please enter the username you could like to create and press ENTER: "
 read USERNAME
-#echo "Enter user password: "
-#read PASSWD
-#create user, prompt for password, add to sudo group
-#sudo useradd -m ${username} -p ${passwd}# -D -s /bin/bash
-#usermod -aG sudo ${username}
 
-sudo useradd -m $USERNAME #-d /home/$USERNAME -s /bin/bash $USERNAME 
+sudo useradd -m $USERNAME -s /bin/bash #$USERNAME 
 sudo passwd $USERNAME 
 usermod -aG sudo $USERNAME
 
+sudo sed '/force_color_prompt=yes/s/^#//' -i ~.bashrc
 
 echo -e "Do you want to sign in as this user now?\n(yes|no)\n"
 read answer
