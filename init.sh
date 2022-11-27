@@ -8,6 +8,6 @@ sudo useradd -m $USERNAME -s /bin/bash #$USERNAME
 sudo passwd $USERNAME 
 sudo usermod -aG sudo $USERNAME
 
-sudo sed '/force_color_prompt=yes/s/^#//' -i ~.bashrc
+sudo sed '/force_color_prompt=yes/s/^#//' -i ~/.bashrc
 
 echo -e "${BGreen}\nUser $USERNAME created! moving on.....${NC}"
