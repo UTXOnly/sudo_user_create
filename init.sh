@@ -1,7 +1,7 @@
 #!/bin/bash
 BGreen='\u001b[32;1m'
 NC='\033[0m'
-echo "${BGreen}Please enter the username you could like to create and press ENTER:${NC} "
+echo -e "${BGreen}Please enter the username you could like to create and press ENTER:${NC} "
 read USERNAME
 
 sudo useradd -m $USERNAME -s /bin/bash #$USERNAME 
